@@ -1,0 +1,17 @@
+<!-- blog/templates/blog/comment_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment List</title>
+</head>
+<body>
+    <h1>All Comments</h1>
+    <ul>
+        {% for comment in comments %}
+            <li><strong>{{ comment.user }}</strong>: {{ comment.content }}</li>
+        {% empty %}
+            <li>No comments available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
